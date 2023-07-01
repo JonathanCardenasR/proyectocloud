@@ -6,6 +6,11 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
+
+
+
+
+
 export class PlataformaService {
   apiURL = environment.API_URL;
 

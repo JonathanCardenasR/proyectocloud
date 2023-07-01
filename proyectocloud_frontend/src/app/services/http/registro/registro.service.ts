@@ -17,6 +17,6 @@ export class RegistroService {
         nombreJuego: nombreJuego,
         pkPlataforma: pkPlataforma
     };
-    return this.http.post<any>(this.apiURL + "/registrarJuego", body);
+    return this.http.post<any>(this.apiURL + "/registrarJuego" , body);
   }
 }
