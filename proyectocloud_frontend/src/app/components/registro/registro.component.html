@@ -5,21 +5,24 @@
             <h1>Registro de juegos</h1>
             <div></div>
         </div>
-    
+
         <div class="row2" style="display: flex; align-items: center; justify-content: center;">
             <h3 style="margin-right: 2%;">Plataforma: </h3>
             <span>
-                <select name="selector">
-                    <option value="value1">Value 1</option>
-                    <option value="value2" selected>Value 2</option>
-                    <option value="value3">Value 3</option>
+                <select name="selector" [(ngModel)]="selectedValue">
+                    <option *ngFor="let dato of datos" [value]="dato.PK_plataforma" [selected]="dato.PK_plataforma === selectedValue">
+                        {{dato.nombre_plataforma}}
+                    </option>
                 </select>
             </span>
         </div>
-    
+
         <div class="row3" style="display: flex; align-items: center; justify-content: center;">
             <h3 style="margin-right: 2%;">Titulo del juego: </h3>
-            <input type="text">
+            <input type="text" [(ngModel)]="tituloJuego">
+        </div>
+        <div class="button" style="display: flex; justify-content: end;">
+            <button style="background-color: cornflowerblue; color:white; width: 100px; height: 40px;" (click)="guardarJuego()">Guardar</button>
         </div>
     </div>
 </div>

@@ -1,28 +1,25 @@
 <div class="maincontainer" style="display: flex; align-items: center; justify-content: center;">
     <div class="subcontainer" style="border: 1px solid blue; width: 450px; padding: 2%;">
-        <div class="row1" style="display: flex; align-items: center; justify-content: space-between;">
-            <img src="../../../assets/images/controller.png" alt="150x150" style="width: 50px;">
-            <h1>Reporte Final</h1>
-            <div></div>
+      <div class="row1" style="display: flex; align-items: center; justify-content: space-between;">
+        <img src="../../../assets/images/controller.png" alt="150x150" style="width: 50px;">
+        <h1>Reporte Final</h1>
+        <div></div>
+      </div>
+  
+      <div class="reporte" style="display: flex;">
+        <div class="col1">
+          <ul style="list-style: none;">
+            <h3>Plataforma</h3>
+            <li *ngFor="let juego of datos">{{ juego.nombrePlataforma }}</li>
+          </ul>
         </div>
-
-        <div class="reporte" style="display: flex;">
-            <div class="col1">    
-                <ul style="list-style: none;">
-                    <h3>Plataforma</h3>
-                    <li>Atari 2600</li>
-                    <li>Super NES</li>
-                    <li>Playstation 4</li>
-                </ul>
-            </div>
-            <div class="col2" style="text-align: center;">    
-                <ul style="list-style: none;">
-                    <h3>Cantidad de Juegos</h3>
-                    <li>50</li>
-                    <li>120</li>
-                    <li>12</li>
-                </ul>
-            </div>
+        <div class="col2" style="text-align: center;">
+          <ul style="list-style: none;">
+            <h3>Cantidad de Juegos</h3>
+            <li *ngFor="let juego of datos">{{ juego.cantJuegos }}</li>
+          </ul>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+  
